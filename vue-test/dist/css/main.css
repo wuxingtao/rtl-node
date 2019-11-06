@@ -1,0 +1,13 @@
+#RTL__body {
+  padding-right: 50px;
+  padding-left: 20px;
+  background-color: red;
+  width: 100%;
+}
+#RTL__body ul {
+  text-align: right;
+}
+#RTL__body ul li {
+  width: 200px;
+}
+
