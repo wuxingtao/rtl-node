@@ -1,8 +1,33 @@
 {
+  "name": "yes",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --harmony index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {},
   "dependencies": {
     "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
+    "nodemon": "^1.19.4",
     "rtlcss": "^2.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuxingtao/rtl-node.git"
+  },
+  "keywords": [
+    "rtl",
+    "node-server"
+  ],
+  "author": "wuxingtao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wuxingtao/rtl-node/issues"
+  },
+  "homepage": "https://github.com/wuxingtao/rtl-node#readme"
 }
