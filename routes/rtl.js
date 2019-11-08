@@ -24,7 +24,7 @@ router.post('/translate', async (ctx, next) => {
     };
     if (htmlCode) {
         try {
-            result = await rtlModule(htmlCode).then(async function (value) {
+             await rtlModule(htmlCode).then(async function (value) {
                 ctx.body = Object.assign(resBody, {
                     data: { html: value }
                 });

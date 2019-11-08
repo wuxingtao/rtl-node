@@ -5,12 +5,12 @@
  */
 const rtlcss = require('rtlcss');
 
-class RtlCssServer {
+class RtlStyle {
     constructor (code) {
         this.code = code;
     }
 
-    init = async () => {
+    init = () => {
         if (!this.code) {
             return false;
         }
@@ -26,7 +26,7 @@ class RtlCssServer {
         for (let index = 0; index < match2.length; index++) {
             this.code = this.code.replace(match2[index], this.styleTrans(2, match2[index]));
         }
-        console.log('rtl ended');
+        console.log('rtl ended ----------------');
         // return this.code;
         return this.code.substring(1, this.code.length - 1);
     };
@@ -62,9 +62,9 @@ class RtlCssServer {
      * var result = rtlcss.process("magint-right:10px;");
      */
     rtlTrans = (str) => {
-        console.log(`need rtl : ${str}`);
+        // console.log(`need rtl : ${str}`);
         return rtlcss.process(str);
     };
 }
 
-module.exports = RtlCssServer;
+module.exports = RtlStyle;
