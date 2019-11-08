@@ -6,6 +6,8 @@
 
 const Router = require('koa-router');
 const router = new Router();
+// 日志管理
+const { logger, accessLogger } = require('../service/logger');
 
 // rtl服务
 const rtlModule = require('../modules/rtl/rtlModule');
@@ -29,7 +31,8 @@ router.post('/translate', async (ctx, next) => {
                     data: { html: value }
                 });
             });
-        } catch (err) {
+        } catch (e) {
+            logger.error(e);
             ctx.body = Object.assign(resBody, {
                 message: 'error'
             });
