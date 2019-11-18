@@ -15,7 +15,7 @@ module.exports = (app) => {
     app.use(koaBody({ multipart: true, jsonLimit: '50mb', formLimit: '50mb' }));
 
     router.get('/', (ctx, next) => {
-        ctx.body = 10;
+        ctx.body = 'welcome use';
     });
     // rtl 路由服务
     router.use('/rtl', rtlCtrl.routes());
