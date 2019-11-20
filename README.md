@@ -16,6 +16,21 @@
 
 ## 部署
 >采用pm2 管理node进程
+>nginx 需配置 client_max_body_size 50M;避免post报错
+
+```
+    server{
+        listen 80;
+        server_name  node.wuxingtao.club;
+        client_max_body_size 50M;
+        index        index.html index.htm;
+        location /{
+           proxy_pass http://127.0.0.1:3001;
+           index index.html;
+        }
+    }
+
+```
 
 ### 步骤
 ```cmd
