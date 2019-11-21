@@ -17,7 +17,7 @@ parent_path=$(dirname "$PWD")
 current_path="$PWD"
 
 if [[ ${sysOS} == "Darwin" ]] || [[ ${sysOS} == "Linux" ]];then
- config_path=${parent_path}/ecosystem.config.js
+ config_path=${project_path}/ecosystem.config.js
 else
  config_path=${current_path}/ecosystem.config.js
 fi

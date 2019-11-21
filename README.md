@@ -1,5 +1,12 @@
 # rtl-node
 
+## 运行
+```
+//本地
+npm install
+npm start
+```
+
 ## 功能列表：
 1. 支持<style>a｛float:left｝</style> rtl样式转换
 2. 支持style="float:left" rtl样式转换
@@ -13,6 +20,9 @@
 1. 日志监听
 2. 错误处理
 3. 线上部署
+
+## 功能流程图
+[流程图](https://drive.google.com/file/d/1KhiwpGVpdQbB8fjjHJjA3XHM6ArC9Uhv/view?usp=sharing)
 
 ## 部署
 >采用pm2 管理node进程
@@ -32,9 +42,16 @@
 
 ```
 
-### 步骤
-```cmd
+### 自动部署
+```
 cd ./rtl-node
+chmod u+x ./sh/pm2.sh
+./sh/pm2.sh
+```
+
+### 手动部署
+```cmd
+cd ./rtl-node/sh
 pm2 start ecosystem.config.js
 
 // 开机启动需增加
