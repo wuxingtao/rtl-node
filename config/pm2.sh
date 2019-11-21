@@ -16,11 +16,14 @@ project_path=$(cd `dirname $0`; pwd)
 parent_path=$(dirname "$PWD")
 current_path="$PWD"
 
-if [[ ${sysOS} == "Darwin" ]] || [[ ${sysOS} == "Linux" ]];then
- config_path=${project_path}/ecosystem.config.js
-else
- config_path=${current_path}/ecosystem.config.js
-fi
+#if [[ ${sysOS} == "Darwin" ]] || [[ ${sysOS} == "Linux" ]];then
+# config_path=${project_path}/ecosystem.config.js
+#else
+# config_path=${current_path}/ecosystem.config.js
+#fi
+
+config_path=${current_path}/ecosystem.config.js
+
 # start pm2 with config
 npx pm2 start ${config_path}
 #

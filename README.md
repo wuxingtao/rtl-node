@@ -25,7 +25,7 @@ npm start
 [流程图](https://drive.google.com/file/d/1KhiwpGVpdQbB8fjjHJjA3XHM6ArC9Uhv/view?usp=sharing)
 
 ## 部署
->采用pm2 管理node进程
+>采用pm2 管理node进程 ecosystem.config.js 生效需要先pm2 delete  geshop-rtl
 >nginx 需配置 client_max_body_size 50M;避免post报错
 
 ```
@@ -45,8 +45,8 @@ npm start
 ### 自动部署
 ```
 cd ./rtl-node
-chmod u+x ./sh/pm2.sh
-./sh/pm2.sh
+chmod u+x ./config/pm2.sh
+./config/pm2.sh
 ```
 
 ### 手动部署

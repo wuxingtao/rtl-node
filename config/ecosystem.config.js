@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name: 'geshop-rtl',
-    script: 'app.js',
+    script: '../app.js',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
@@ -15,9 +15,9 @@ module.exports = {
     env_production: {
       NODE_ENV: 'production'
     },
-    error_file: './pm2_logs/err.log',
-    out_file: './pm2_logs/out.log',
-    log_file: './pm2_logs/combined.log',
+    error_file: '../pm2_logs/err.log',
+    out_file: '../pm2_logs/out.log',
+    log_file: '../pm2_logs/combined.log',
     time: true
   }],
 
