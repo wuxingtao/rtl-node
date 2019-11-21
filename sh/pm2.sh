@@ -28,4 +28,4 @@ npx pm2 start ${config_path}
 npx pm2 set pm2-logrotate:retain 10
 
 
-exec /bin/bash
+#exec /bin/bash
