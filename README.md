@@ -38,9 +38,16 @@ cd ./rtl-node
 pm2 start ecosystem.config.js
 
 // 开机启动需增加
-pm2 save 
-pm2 startup 
+pm2 save
+pm2 startup centos
 
 // pm2 monit 监控CPU/内存/log
 // pm2 plus 开启 app.pm2.io远程监听
+```
+
+### 开启日志策略
+```
+    pm2 set pm2-logrotate:rotateInterval '* * */1 * *'     //每小时备份
+    pm2 set pm2-logrotate:compress true    //压缩
+    pm2 set pm2-logrotate:retain 10  //备份最多10份，也就是备份最进3小时的日志
 ```

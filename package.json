@@ -16,6 +16,7 @@
     "koa-log4": "^2.3.2",
     "koa-router": "^7.4.0",
     "nodemon": "^1.19.4",
+    "pm2-logrotate": "^2.7.0",
     "rtlcss": "^2.4.0"
   },
   "repository": {
