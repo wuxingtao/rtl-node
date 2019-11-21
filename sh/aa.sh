@@ -7,16 +7,9 @@
 #echo $project_name
 #echo $root_path
 
-# work path
 project_path=$(cd `dirname $0`; pwd)
-#echo $project_path
-# parent root
 root_path=$(dirname "$PWD")
-# start pm2 with config
-npx pm2 start $root_path/ecosystem.config.js
+echo $project_path
+echo $root_path
 
-# set logrotate limit 10 log files
-npx pm2 set pm2-logrotate:retain 10
-
-
-#exec /bin/bash
+exec /bin/bash
